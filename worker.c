@@ -4,7 +4,8 @@
 int main(int argc, char *argv[]){
 	printf("You are in worker.c\n");
     if(argc == 2){
-        int loop = argv[1];
+        char *n = argv[1];
+        int loop = atoi(n);
         printf("Amount of loops: %i", loop);
 
     } else {

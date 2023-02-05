@@ -16,6 +16,7 @@ int main(int argc, char *argv[]){
 			printf("This is your help message!\n");
             break;
         case 'n':
+			//atoi convert char to int
             proc = atoi(optarg);
 			printf("proc,n: %i", proc);
 			printf("\n");

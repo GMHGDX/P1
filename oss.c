@@ -58,8 +58,10 @@ int main(int argc, char *argv[]){
             perror("Failed to fork");
             return 1;
         }
-        if (childpid == 0) /* child code */
+        if (childpid == 0){ /* child code */
             printf("I am child %ld and my parent is: %ld\n", (long)getpid(), (long)getppid());
+            break;
+        }
         else /* parent code */
             printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
     

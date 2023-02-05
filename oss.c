@@ -37,7 +37,8 @@ int main(int argc, char *argv[]){
             return (EXIT_FAILURE);
         }
     }
-	Worker(iter);
+
+	worker(iter);
 return 0;
 }
 

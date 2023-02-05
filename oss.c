@@ -52,7 +52,7 @@ int main(int argc, char *argv[]){
     pid_t childpid = 0;
 
     int i;
-    for (i = 1; i < proc; i++){
+    for (i = 0; i < proc; i++){
         childpid = fork();
         if (childpid == -1) {
             perror("Failed to fork");

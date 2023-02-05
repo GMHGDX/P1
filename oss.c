@@ -24,21 +24,18 @@ int main(int argc, char *argv[]){
         case 'n':
 			//atoi convert char to int
             proc = atoi(optarg);
-			printf("proc,n: %i", proc);
-			printf("\n");
+			printf("proc,n: %i \n", proc);
             break;
         case 's':
             simul = atoi(optarg);
-			printf("simul,s: %i", simul);
-			printf("\n");
+			printf("simul,s: %i \n", simul);
             break;
         case 't':
             iter = atoi(optarg);
-			printf("iter,t: %i", iter);
-			printf("\n");
+			printf("iter,t: %i \n", iter);
             break;
         default: /* '?' */
-            printf ("Invalid option %c\n", optopt);
+            printf ("Invalid option %c \n", optopt);
             return (EXIT_FAILURE);
         }
     }

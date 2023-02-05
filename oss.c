@@ -3,29 +3,29 @@
 #include<stdlib.h> //EXIT_FAILURE
 
 int main(int argc, char *argv[]){
-	printf("You are in oss.c");
+	printf("You are in oss.c1\n");
 	
 	int proc, simul, iter;
 
 	char opt;
-    while((opt = getopt(argc, argv, "hnst:")) != -1 )
+    while((opt = getopt(argc, argv, "hn:s:t:")) != -1 )
     {
         switch (opt)
         {
         case 'h':
-			printf("This is your help message!");
+			printf("This is your help message!\n");
             break;
         case 'n':
             proc = atoi(optarg);
-			printf("proc/n: " + proc);
+			printf("proc/n: \n" + proc);
             break;
         case 's':
             simul = atoi(optarg);
-			printf("simul/s: " + proc);
+			printf("simul/s: \n" + proc);
             break;
         case 't':
             iter = atoi(optarg);
-			printf("iter/t: " + proc);
+			printf("iter/t: \n" + proc);
             break;
         default: /* '?' */
             printf ("Invalid option %c\n", optopt);

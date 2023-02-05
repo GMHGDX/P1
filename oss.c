@@ -66,13 +66,28 @@ int main(int argc, char *argv[]){
         else /* parent code */
             printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
 
-            if(i == simul){
+            if(i % simul == 0){
+                simul+= simul;
                 childpid = wait(NULL);
                 if (childpid != -1){
                     printf("Waited for child with pid %ld\n", childpid);
                 }
             }
     }
+
+    childpid = wait(NULL);
+        if (childpid != -1){
+            printf("Waited for child with pid %ld\n", childpid);
+        }
     return 0;
 }
 
+
+i % suml = 0
+1 child 3 simul
+
+1 % 3 = 1
+2 % 3 = 2
+3 % 3 = 0
+4 % 3 = 1
+5 % 3 = 2

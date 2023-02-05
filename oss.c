@@ -60,20 +60,13 @@ int main(int argc, char *argv[]){
         }
         if (childpid == 0){ /* child code */
             printf("I am child %ld and my parent is: %ld\n", (long)getpid(), (long)getppid());
+            worker(iter);
             break;
         }
         else /* parent code */
             printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
-    
-        // if (childpid = fork())
-        //     // printf ("I am the child \n");
-	    //     // worker(iter);
-        //     break;
-    }
 
-    // printf ("I am the child \n");
-	// worker(iter);
-	//worker(iter);
+    }
 
     return 0;
 }

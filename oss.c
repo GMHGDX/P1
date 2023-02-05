@@ -1,5 +1,6 @@
-//test file for oss
 #include<stdio.h>
+#include<getopt.h> //optarg
+#include<stdlib.h> //EXIT_FAILURE
 
 int main(int argc, char *argv[]){
 	printf("You are in oss.c");

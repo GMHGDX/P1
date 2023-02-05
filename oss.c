@@ -29,7 +29,6 @@ int main(int argc, char *argv[]){
             break;
         default: /* '?' */
             printf ("Invalid option %c\n", optopt);
-            print_usage (argv[0]);
             return (EXIT_FAILURE);
         }
     }

@@ -53,14 +53,24 @@ int main(int argc, char *argv[]){
 
     int i;
     for (i = 1; i < proc; i++){
-        if (childpid = fork())
-            // printf ("I am the child \n");
-	        // worker(iter);
-            break;
+        childpid = fork();
+        if (childpid == -1) {
+            perror("Failed to fork");
+            return 1;
+        }
+        if (childpid == 0) /* child code */
+            printf("I am child %ld and my parent is: %ld\n", (long)getpid(), (long)getppid());
+        else /* parent code */
+            printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
+    
+        // if (childpid = fork())
+        //     // printf ("I am the child \n");
+	    //     // worker(iter);
+        //     break;
     }
 
-    printf ("I am the child \n");
-	worker(iter);
+    // printf ("I am the child \n");
+	// worker(iter);
 	//worker(iter);
 
     return 0;

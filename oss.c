@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<getopt.h> //Needed for optarg function
 #include<stdlib.h> //EXIT_FAILURE
+#include "oss.h"
 
 int main(int argc, char *argv[]){
 	printf("You are in oss.c\n");
@@ -36,6 +37,7 @@ int main(int argc, char *argv[]){
             return (EXIT_FAILURE);
         }
     }
+	Worker(iter);
 return 0;
 }
 

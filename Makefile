@@ -11,7 +11,7 @@ $(TARGET): $(OBJS)
 $(LIB): $(LIBOBJS)
 	$(CC) -shared -Wl,-soname,$@ -o $@ $(LIBOBJS)
 worker.o: worker.c
-	$(CC) -fpic -c square.c
+	$(CC) -fpic -c worker.c
 .c.o:
 	$(CC) $(CFLAGS) -c $<
 .PHONY: clean

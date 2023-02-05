@@ -52,7 +52,7 @@ int main(int argc, char *argv[]){
     pid_t childpid = 0;
 
     int i;
-    for (i = 0; i < proc; i++){
+    for (i = 1; i <= proc; i++){
         childpid = fork();
         if (childpid == -1) {
             perror("Failed to fork");
@@ -66,8 +66,10 @@ int main(int argc, char *argv[]){
         else /* parent code */
             printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
             childpid = wait(NULL);
-            if (childpid != -1){
-                printf("Waited for child with pid %ld\n", childpid);
+            if(i == proc){
+                if (childpid != -1){
+                    printf("Waited for child with pid %ld\n", childpid);
+                }
             }
     }
     return 0;

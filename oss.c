@@ -54,7 +54,7 @@ int main(int argc, char *argv[]){
     int i;
     for (i = 1; i < proc; i++){
         if (childpid = fork())
-            printf ("I am the child");
+            printf ("I am the child \n");
 	        worker(iter);
             break;
     }

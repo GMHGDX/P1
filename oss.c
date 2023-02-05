@@ -65,8 +65,9 @@ int main(int argc, char *argv[]){
         }
         else /* parent code */
             printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
-            childpid = wait(NULL);
+
             if(i == proc){
+                childpid = wait(NULL);
                 if (childpid != -1){
                     printf("Waited for child with pid %ld\n", childpid);
                 }

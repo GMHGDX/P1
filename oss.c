@@ -6,7 +6,12 @@
 int main(int argc, char *argv[]){
 	printf("You are in oss.c\n");
 	
-	int proc, simul, iter;
+	//number of total children to launch
+	int proc;
+	//how many children run at the same time
+	int simul;
+	//number to pass to worker process (iterations) 
+	int iter;
 
 	char opt;
     while((opt = getopt(argc, argv, "hn:s:t:")) != -1 )

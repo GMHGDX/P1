@@ -84,14 +84,6 @@ int main(int argc, char *argv[]){
 
 
 int mod(int n, int d){
-    int remainer = n - d *(int)(n/d);
+    int remainder = n - d *(int)(n/d);
+    return remainder;
 }
-
-// i % suml = 0
-// 1 child 3 simul
-
-// 1 % 3 = 1
-// 2 % 3 = 2
-// 3 % 3 = 0
-// 4 % 3 = 1
-// 5 % 3 = 2

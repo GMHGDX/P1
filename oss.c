@@ -8,7 +8,7 @@ int main(int argc, char *argv[]){
 	int proc, simul, iter;
 
 	char opt;
-    while((opt = getopt(argc, argv, optarg)) != -1 )
+    while((opt = getopt(argc, argv, "hnst:")) != -1 )
     {
         switch (opt)
         {

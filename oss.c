@@ -14,6 +14,7 @@ int main(int argc, char *argv[]){
 	int simul;
 	//number to pass to worker process (iterations) 
 	int iter;
+    int i;
 
     pid_t getpid(void);
     pid_t getppid(void);
@@ -50,7 +51,7 @@ int main(int argc, char *argv[]){
 
     pid_t childpid = 0;
 
-    for (int i = 1; i < proc; i++){
+    for (i = 1; i < proc; i++){
         if (childpid = fork())
         break;
         fprintf(stderr, "i: %d process ID: %ld parent ID: %ld child ID: %ld\n", i, (long)getpid(), (long)getppid(), (long)childpid);

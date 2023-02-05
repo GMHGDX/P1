@@ -1,17 +1,25 @@
 #include<stdio.h>
 #include<getopt.h> //Needed for optarg function
 #include<stdlib.h> //EXIT_FAILURE
+#include <unistd.h> //for pid_t 
+#include <sys/types.h>
 #include "oss.h"
 
 int main(int argc, char *argv[]){
 	printf("You are in oss.c\n");
-	
+
 	//number of total children to launch
 	int proc;
 	//how many children run at the same time
 	int simul;
 	//number to pass to worker process (iterations) 
 	int iter;
+
+    pid_t getpid(void);
+    pid_t getppid(void);
+
+    printf("I am process %ld\n", (long)getpid());
+    printf("My parent is %ld\n", (long)getpid());
 
 	char opt;
     while((opt = getopt(argc, argv, "hn:s:t:")) != -1 )
@@ -40,7 +48,16 @@ int main(int argc, char *argv[]){
         }
     }
 
+    pid_t childpid = 0;
+
+    for (int i = 1; i < proc; i++){
+        if (childpid = fork())
+        break;
+        fprintf(stderr, "i: %d process ID: %ld parent ID: %ld child ID: %ld\n", i, (long)getpid(), (long)getppid(), (long)childpid);
+    }
+    
 	worker(iter);
-return 0;
+
+    return 0;
 }
 

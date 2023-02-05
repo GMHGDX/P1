@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include <unistd.h> //for sleep();
+#include <unistd.h> //for sleep() and pid_t 
 #include "oss.h"
 
 int worker(int iter){

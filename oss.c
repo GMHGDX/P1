@@ -17,7 +17,7 @@ int main(int argc, char *argv[]){
             break;
         case 'n':
             proc = atoi(optarg);
-			printf("proc,n: %c" + proc);
+			printf("proc,n: %c", proc);
 			printf("\n");
             break;
         case 's':
@@ -27,7 +27,7 @@ int main(int argc, char *argv[]){
             break;
         case 't':
             iter = atoi(optarg);
-			printf("iter,t: %c" + iter);
+			printf("iter,t: %c", iter);
 			printf("\n");
             break;
         default: /* '?' */

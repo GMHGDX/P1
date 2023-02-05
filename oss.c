@@ -57,6 +57,7 @@ int main(int argc, char *argv[]){
         break;
     }
     
+    printf ("I am the parent");
 	worker(iter);
 
     return 0;

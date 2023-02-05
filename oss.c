@@ -17,17 +17,17 @@ int main(int argc, char *argv[]){
             break;
         case 'n':
             proc = atoi(optarg);
-			printf("proc,n: %i" + proc);
+			printf("proc,n: %c" + proc);
 			printf("\n");
             break;
         case 's':
             simul = atoi(optarg);
-			printf("simul,s: %i", simul);
+			printf("simul,s: %c", simul);
 			printf("\n");
             break;
         case 't':
             iter = atoi(optarg);
-			printf("iter,t: %i" + iter);
+			printf("iter,t: %c" + iter);
 			printf("\n");
             break;
         default: /* '?' */

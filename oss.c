@@ -68,6 +68,8 @@ int main(int argc, char *argv[]){
 
     }
 
+     printf("PArent going to bed now ");
+
     return 0;
 }
 

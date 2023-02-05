@@ -85,5 +85,7 @@ int main(int argc, char *argv[]){
 
 int mod(int n, int d){
     int remainder = n - d *(int)(n/d);
+    printf("The reaminerrrrrrrrrrrrrrrrrrrrrrrrrrr: %i\n", remainder);
+    printf("\n");
     return remainder;
 }

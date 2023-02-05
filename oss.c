@@ -1,9 +1,9 @@
 #include<stdio.h>
-#include<getopt.h> //optarg
+#include<getopt.h> //Needed for optarg function
 #include<stdlib.h> //EXIT_FAILURE
 
 int main(int argc, char *argv[]){
-	printf("You are in oss.c1\n");
+	printf("You are in oss.c\n");
 	
 	int proc, simul, iter;
 

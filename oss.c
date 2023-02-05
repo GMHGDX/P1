@@ -66,7 +66,7 @@ int main(int argc, char *argv[]){
         else /* parent code */
             printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
 
-            if(i % simul == 0){
+            if(mod(i, simul) == 0){
                 simul+= simul;
                 childpid = wait(NULL);
                 if (childpid != -1){
@@ -83,11 +83,15 @@ int main(int argc, char *argv[]){
 }
 
 
-i % suml = 0
-1 child 3 simul
+int mod(int n, int d){
+    int remainer = n - d *(int)(n/d);
+}
 
-1 % 3 = 1
-2 % 3 = 2
-3 % 3 = 0
-4 % 3 = 1
-5 % 3 = 2
+// i % suml = 0
+// 1 child 3 simul
+
+// 1 % 3 = 1
+// 2 % 3 = 2
+// 3 % 3 = 0
+// 4 % 3 = 1
+// 5 % 3 = 2

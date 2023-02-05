@@ -17,15 +17,18 @@ int main(int argc, char *argv[]){
             break;
         case 'n':
             proc = atoi(optarg);
-			printf("proc,n: \n" + proc);
+			printf("proc,n: " + proc);
+			printf("\n");
             break;
         case 's':
             simul = atoi(optarg);
-			printf("simul,s: \n" + proc);
+			printf("simul,s: " + simul);
+			printf("\n");
             break;
         case 't':
             iter = atoi(optarg);
-			printf("iter,t: \n" + proc);
+			printf("iter,t: " + iter);
+			printf("\n");
             break;
         default: /* '?' */
             printf ("Invalid option %c\n", optopt);

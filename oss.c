@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
     pid_t getppid(void);
 
     printf("I am process %ld\n", (long)getpid());
-    printf("My parent is %ld\n", (long)getpid());
+    printf("My parent is %ld\n", (long)getppid());
 
 	char opt;
     while((opt = getopt(argc, argv, "hn:s:t:")) != -1 )

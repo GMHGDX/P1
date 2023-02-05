@@ -11,9 +11,9 @@ int worker(int iter){
 
     for(i = 1; i < (iter + 1); i++){
         //EX: WORKER PID:6577 PPID:6576 Iteration:3 before sleeping
-        printf("WORKER PID: %i PPID: %i Iteration: %i before sleeping \n", 1, 2, i);
+        printf("WORKER PID: %ld PPID: %ld Iteration: %i before sleeping \n", (long)getpid(), (long)getppid(), i);
         sleep(5);
-        printf("WORKER PID: %i PPID: %i Iteration: %i after sleeping \n", 1, 2, i);
+        printf("WORKER PID: %ld PPID: %ld Iteration: %i after sleeping \n", (long)getpid(), (long)getppid(), i);
     }
 }
 

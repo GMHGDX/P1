@@ -55,7 +55,6 @@ int main(int argc, char *argv[]){
     for (i = 1; i < proc; i++){
         if (childpid = fork())
         break;
-        fprintf(stderr, "i: %d process ID: %ld parent ID: %ld child ID: %ld\n", i, (long)getpid(), (long)getppid(), (long)childpid);
     }
     
 	worker(iter);

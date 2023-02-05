@@ -16,7 +16,7 @@ int worker(int iter){
         printf("WORKER PID: %ld PPID: %ld Iteration: %i after sleeping \n", (long)getpid(), (long)getppid(), i);
     }
 
-    printf("Worker: %ld sleeping now", (long)getpid());
+    printf("Worker: %ld sleeping now \n\n", (long)getpid());
     return;
 }
 

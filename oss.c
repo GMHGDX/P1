@@ -68,7 +68,7 @@ int main(int argc, char *argv[]){
 
     }
 
-     printf("PArent going to bed now ");
+    printf("PArent going to bed now \n\n");
 
     return 0;
 }

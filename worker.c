@@ -1,9 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <unistd.h> //for sleep() and pid_t 
-#include "oss.h"
+// #include "oss.h"
 
-int worker(int iter){
+//int worker(int iter){
+int main(int argc, char *argv[]){
+    int iter = argv[0];
 	printf("You are in worker.c \n");
 
     printf("Amount of loops: %i \n", iter);

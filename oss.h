@@ -1,3 +1,3 @@
 #include <stdio.h> 
 
-int worker(int);
+// int worker(int);

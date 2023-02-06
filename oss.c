@@ -73,7 +73,7 @@ int main(int argc, char *argv[]){
                 }
             }
             if(i==proc){
-                childpid = wait(NULL);
+                childpid = wait(-1);
                 if (childpid != -1){
                     printf("Waited for child with pid %ld\n", childpid);
                 }

@@ -73,8 +73,9 @@ int main(int argc, char *argv[]){
                 }
             }
             if(i==proc){
-                printf("------------------------------------last loop waiting of rlast child");
+                printf("------------------------------------last loop waiting of rlast child . pid is %ld\n", childpid);
                 childpid = wait(childpid);
+                printf("------------------------------------after wait . pid is %ld\n", childpid);
                 if (childpid != -1){
                     printf("Waited for child with pid %ld\n", childpid);
                 }

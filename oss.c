@@ -67,14 +67,14 @@ int main(int argc, char *argv[]){
             printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
 
             if(mod(i, simul) == 0){
-                childpid = wait(childpid);
+                childpid = waitpid(childpid);
                 if (childpid != -1){
                     printf("Waited for child with pid %ld\n", childpid);
                 }
             }
             if(i==proc){
                 printf("------------------------------------last loop waiting of rlast child . pid is %ld\n", childpid);
-                childpid = wait(childpid);
+                childpid = waitpid(childpid);
                 printf("------------------------------------after wait . pid is %ld\n", childpid);
                 if (childpid != -1){
                     printf("Waited for child with pid %ld\n", childpid);

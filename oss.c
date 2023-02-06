@@ -86,7 +86,7 @@ int main(int argc, char *argv[]){
 int mod(int n, int d){
     int divisor = (int)(n/d);
     int remainder = n - (d * divisor);
-    printf("The reaminerrrrrrrrrrrrrrrrrrrrrrrrrrr: %i\n", remainder);
+    printf("N is %i anmd d is %i amd divisor %i The reaminerrrrrrrrrrrrrrrrrrrrrrrrrrr: %i\n", n, d, divisor, remainder);
     printf("\n");
     return remainder;
 }

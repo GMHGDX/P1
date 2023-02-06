@@ -67,7 +67,6 @@ int main(int argc, char *argv[]){
             printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
 
             if(mod(i, simul) == 0){
-                simul+= simul;
                 childpid = wait(NULL);
                 if (childpid != -1){
                     printf("Waited for child with pid %ld\n", childpid);

@@ -3,6 +3,7 @@
 #include<stdlib.h> //EXIT_FAILURE
 #include <unistd.h> //for pid_t 
 #include <sys/types.h>
+
 #include "oss.h"
 
 int main(int argc, char *argv[]){
@@ -14,6 +15,8 @@ int main(int argc, char *argv[]){
 	int simul;
 	//number to pass to worker process (iterations) 
 	int iter;
+
+    int stat;
     
 
     pid_t getpid(void);
@@ -67,14 +70,14 @@ int main(int argc, char *argv[]){
             printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
 
             if(mod(i, simul) == 0){
-                childpid = waitpid(childpid);
+                childpid = waitpid(childpid, &stat, 0);
                 if (childpid != -1){
                     printf("Waited for child with pid %ld\n", childpid);
                 }
             }
             if(i==proc){
                 printf("------------------------------------last loop waiting of rlast child . pid is %ld\n", childpid);
-                childpid = waitpid(childpid);
+                childpid = waitpid(childpid, &stat, 0);
                 printf("------------------------------------after wait . pid is %ld\n", childpid);
                 if (childpid != -1){
                     printf("Waited for child with pid %ld\n", childpid);

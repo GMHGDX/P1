@@ -19,6 +19,6 @@ int main(int argc, char *argv[]){
     }
 
     printf("Worker: %ld sleeping now \n\n", (long)getpid());
-    return;
+    return 0;
 }
 

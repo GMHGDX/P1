@@ -32,7 +32,7 @@ int main(int argc, char *argv[]){
                     printf("\t-t = number to pass to worker process (iterations)\n\n");
                     
                     printf("If you leave out a -n, -s, or -t it will defualt to the value 1\n\n");
-                    printf("Have fun :)\n");
+                    printf("Have fun :)\n\n");
 
                     exit(0);
             break;

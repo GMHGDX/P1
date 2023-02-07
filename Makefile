@@ -12,3 +12,6 @@ worker: worker.o
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $*.c
+
+clean: 
+	rm *.o oss worker

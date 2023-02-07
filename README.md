@@ -15,6 +15,6 @@ Run the folowing command for help on how to run the project:
 
 ./oss -h
 
-or run:
+or to skip the read on ./oss -h, just run:
 
 ./oss -n num -s num -t num 

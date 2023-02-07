@@ -5,7 +5,7 @@
 
 //int worker(int iter){
 int main(int argc, char *argv[]){
-    int iter = argv[0];
+    int iter = argv[1];
 	printf("You are in worker.c \n");
 
     printf("Amount of loops: %i \n", iter);

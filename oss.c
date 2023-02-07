@@ -72,7 +72,7 @@ int main(int argc, char *argv[]){
             // }
             if(i >= simul){
                 childpid = waitpid(0, &stat, 0);
-                fprintf("---------------------------mkamin a baby");
+                printf("---------------------------mkamin a baby");
             }
 
             //wait again on the very last process if proc isnt evenly divisible by simul

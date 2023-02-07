@@ -62,9 +62,9 @@ int main(int argc, char *argv[]){
         if (childpid == 0){ /* child code */
             printf("I am child %ld and my parent is: %ld\n", (long)getpid(), (long)getppid());
             //worker(iter);
-            char *programName = "ls";
-            char *args[] = {"/worker", iter};
-            execvp(programName, args);
+            char *programName = "./worker";
+            char *args[] = {programName, iter};
+            execv(programName, args);
             break;
         }
         else { /* parent code */

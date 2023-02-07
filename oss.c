@@ -62,7 +62,7 @@ int main(int argc, char *argv[]){
         if (childpid == 0){ /* child code */
             printf("I am child %ld and my parent is: %ld\n", (long)getpid(), (long)getppid());
             //worker(iter);
-            char *args[] = {"./worker", NULL};
+            char *args[] = {"/worker", iter};
             execvp(args[0], args);
             break;
         }

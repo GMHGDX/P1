@@ -65,7 +65,7 @@ int main(int argc, char *argv[]){
             execl("/bin/ls", "ls", "-l", NULL);
             // char *args[] = {"./worker", NULL};
             // int returnval = execvp(args[0], args);
-            printf("---------------------Returend with %i", returnval);
+            printf("---------------------Returend with");
             break;
         }
         else { /* parent code */

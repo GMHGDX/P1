@@ -71,7 +71,7 @@ int main(int argc, char *argv[]){
             printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
 
             //Parent waits until the children are done (after the simul number of processes)
-            if(Mod(i, simul) == 0){
+            if(mod(i, simul) == 0){
                 childpid = waitpid(childpid, &stat, 0);
                 if (childpid != -1){
                     printf("Waited for child with pid %ld\n", childpid);
@@ -92,7 +92,7 @@ int main(int argc, char *argv[]){
 }
 
 //Modulus calculation in order to determine how many run simultaneously before doing wait function
-int Mod(int n, int d){
+int mod(int n, int d){
     int remainder = n - (d * ((int)(n/d)));
     printf("N is %i and d is %i | The reaminerrrrrrrrrrrrrrrrrrrrrrrrrrr: %i\n", n, d, remainder);
     printf("\n");

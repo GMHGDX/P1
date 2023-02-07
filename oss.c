@@ -71,7 +71,7 @@ int main(int argc, char *argv[]){
             //     childpid = waitpid(childpid, &stat, 0);
             // }
             if(i >= simul){
-                childpid = waitpid(0, &stat, 0);
+                childpid = waitpid(-1, &stat, 0);
                 printf("---------------------------mkamin a baby");
             }
 

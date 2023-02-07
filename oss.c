@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
                     printf("\tnum = can be replaced with any number below 18 | -n, -s, and -t can be typed in any order\n");
                     printf("\t-n = number of total children to launch\n");
                     printf("\t-s = how many children run at the same time\n");
-                    printf("\t-t = number to pass to worker process (iterations)\n");
+                    printf("\t-t = number to pass to worker process (iterations)\n\n");
                     
                     printf("If you leave out a -n, -s, or -t it will defualt to the value 1\n\n");
                     printf("Have fun :)\n");

@@ -1,3 +1,7 @@
+// Name: Gabrielle Hieken
+// Class: 4760 Operating Systems
+// Date: 2/1/2023
+
 #include <stdio.h>
 #include <getopt.h> //Needed for optarg function
 #include <stdlib.h> //EXIT_FAILURE

@@ -76,9 +76,9 @@ int main(int argc, char *argv[]){
             }
 
             //wait again on the very last process if proc isnt evenly divisible by simul
-            // if(i == proc){
-            //     childpid = waitpid(childpid, &stat, 0);
-            // }
+            if(i == proc){
+                childpid = waitpid(childpid, &stat, 0);
+            }
         }
     }
     return 0;

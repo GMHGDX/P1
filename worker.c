@@ -8,6 +8,7 @@ int main(int argc, char *argv[]){
     int iter = atoi(argv[1]);
 
     int i;
+    //Print statements for each iteration
     for(i = 1; i < (iter + 1); i++){
         //EX: WORKER PID:6577 PPID:6576 Iteration:3 before sleeping
         printf("WORKER PID: %ld PPID: %ld Iteration: %i before sleeping \n", (long)getpid(), (long)getppid(), i);

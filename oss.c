@@ -27,6 +27,7 @@ int main(int argc, char *argv[]){
     {
         switch (opt)
         {
+        //help message
         case 'h':
 			printf("To run this project: \n\n");
             printf("run the command: ./oss -n num -s num -t num\n\n");

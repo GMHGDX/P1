@@ -6,14 +6,12 @@
 #include <sys/wait.h>
 
 int main(int argc, char *argv[]){
-	printf("You are in oss.c\n");
-
 	//number of total children to launch
-	int proc;
+	int proc = 0;
 	//how many children run at the same time
-	int simul;
+	int simul = 0;
 	//number to pass to worker process (iterations) 
-	int iter;
+	int iter = 0;
 
     int stat;
 
@@ -29,15 +27,15 @@ int main(int argc, char *argv[]){
         case 'n':
 			//atoi convert char to int
             proc = atoi(optarg);
-			printf("proc,n: %i \n", proc);
+			//printf("proc,n: %i \n", proc);
             break;
         case 's':
             simul = atoi(optarg);
-			printf("simul,s: %i \n", simul);
+			//printf("simul,s: %i \n", simul);
             break;
         case 't':
             iter = atoi(optarg);
-			printf("iter,t: %i \n", iter);
+			//printf("iter,t: %i \n", iter);
             break;
         default:
             printf ("Invalid option %c \n", optopt);
@@ -55,7 +53,7 @@ int main(int argc, char *argv[]){
             return 1;
         }
         if (childpid == 0){ 
-            printf("I am child %ld and my parent is: %ld\n", (long)getpid(), (long)getppid());
+            //printf("I am child %ld and my parent is: %ld\n", (long)getpid(), (long)getppid());
 
             //convert iter into a string in order to use it in the exec function
             char iterString[50];

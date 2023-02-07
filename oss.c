@@ -63,7 +63,8 @@ int main(int argc, char *argv[]){
             printf("I am child %ld and my parent is: %ld\n", (long)getpid(), (long)getppid());
             //worker(iter);
             char *args[] = {"./worker", NULL};
-            execvp(args[0], args);
+            int returnval = execvp(args[0], args);
+            printf("---------------------Returend with %i", returnval);
             break;
         }
         else { /* parent code */

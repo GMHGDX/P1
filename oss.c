@@ -71,7 +71,8 @@ int main(int argc, char *argv[]){
             //     childpid = waitpid(childpid, &stat, 0);
             // }
             if(i >= simul){
-                childpid = waitpid(-1, &stat, 0);
+                //childpid = waitpid(-1, &stat, 0);
+                wait(&stat);
                 printf("---------------------------mkamin a baby");
             }
 
@@ -84,11 +85,11 @@ int main(int argc, char *argv[]){
     return 0;
 }
 
-//Modulus calculation in order to determine how many run simultaneously before doing wait function
-int mod(int n, int d){
-    int remainder = n - (d * ((int)(n/d)));
-    return remainder;
-}
+// //Modulus calculation in order to determine how many run simultaneously before doing wait function
+// int mod(int n, int d){
+//     int remainder = n - (d * ((int)(n/d)));
+//     return remainder;
+// }
 
 
 

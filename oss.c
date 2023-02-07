@@ -5,13 +5,15 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+int mod(int n, int d);
+
 int main(int argc, char *argv[]){
 	//number of total children to launch
-	int proc = 0;
+	int proc = 1;
 	//how many children run at the same time
-	int simul = 0;
+	int simul = 1;
 	//number to pass to worker process (iterations) 
-	int iter = 0;
+	int iter = 2;
 
     int stat;
 

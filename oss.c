@@ -66,20 +66,15 @@ int main(int argc, char *argv[]){
             break;
         }
         else {
-            //Parent waits until the children are done (after the simul number of processes)
-            // if(mod(i, simul) == 0){
-            //     childpid = waitpid(childpid, &stat, 0);
-            // }
+            //wait for the process to finish after running the given simul int simultaneously
             if(i >= simul){
-                //childpid = waitpid(-1, &stat, 0);
                 wait(&stat);
-                printf("---------------------------mkamin a baby");
             }
 
             //wait again on the very last process if proc isnt evenly divisible by simul
-            if(i == proc){
-                childpid = waitpid(childpid, &stat, 0);
-            }
+            // if(i == proc){
+            //     childpid = waitpid(childpid, &stat, 0);
+            // }
         }
     }
     return 0;

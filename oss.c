@@ -4,8 +4,6 @@
 #include <unistd.h> //for pid_t 
 #include <sys/types.h>
 
-#include "oss.h"
-
 int main(int argc, char *argv[]){
 	printf("You are in oss.c\n");
 

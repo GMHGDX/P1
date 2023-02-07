@@ -5,10 +5,9 @@
 
 //int worker(int iter){
 int main(int argc, char *argv[]){
-    int iter = atoi(argv[1]);
+    //int iter = atoi(argv[1]);
 	printf("You are in worker.c \n");
 
-    printf("Amount of loops: %i \n", iter);
     int i;
 
     for(i = 1; i < (iter + 1); i++){
@@ -17,8 +16,6 @@ int main(int argc, char *argv[]){
         sleep(2);
         printf("WORKER PID: %ld PPID: %ld Iteration: %i after sleeping \n", (long)getpid(), (long)getppid(), i);
     }
-
-    printf("Worker: %ld sleeping now \n\n", (long)getpid());
     return 0;
 }
 

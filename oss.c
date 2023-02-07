@@ -49,14 +49,13 @@ int main(int argc, char *argv[]){
 
     int i;
     for (i = 1; i <= proc; i++){
+        //fork process
         childpid = fork();
         if (childpid == -1) {
             perror("Failed to fork");
             return 1;
         }
         if (childpid == 0){ 
-            //printf("I am child %ld and my parent is: %ld\n", (long)getpid(), (long)getppid());
-
             //convert iter into a string in order to use it in the exec function
             char iterString[50];
             snprintf(iterString, sizeof(iterString), "%i", iter);
@@ -64,27 +63,16 @@ int main(int argc, char *argv[]){
             //exec function to send children to worker
             char *args[] = {"worker", iterString, NULL};
             execvp("./worker", args);
-            printf("---------------------Returend with");
             break;
         }
         else {
-            printf("I am parent %ld I created %ld\n", (long)getpid(), (long)childpid);
-
             //Parent waits until the children are done (after the simul number of processes)
             if(mod(i, simul) == 0){
                 childpid = waitpid(childpid, &stat, 0);
-                if (childpid != -1){
-                    printf("Waited for child with pid %ld\n", childpid);
-                }
             }
             //wait again on the very last process if proc isnt evenly divisible by simul
             if(i == proc){
-                printf("------------------------------------last loop waiting of rlast child . pid is %ld\n", childpid);
                 childpid = waitpid(childpid, &stat, 0);
-                printf("------------------------------------after wait . pid is %ld\n", childpid);
-                if (childpid != -1){
-                    printf("Waited for child with pid %ld\n", childpid);
-                }
             }
         }
     }
@@ -94,8 +82,6 @@ int main(int argc, char *argv[]){
 //Modulus calculation in order to determine how many run simultaneously before doing wait function
 int mod(int n, int d){
     int remainder = n - (d * ((int)(n/d)));
-    printf("N is %i and d is %i | The reaminerrrrrrrrrrrrrrrrrrrrrrrrrrr: %i\n", n, d, remainder);
-    printf("\n");
     return remainder;
 }
 

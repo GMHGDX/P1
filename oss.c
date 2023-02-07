@@ -33,6 +33,8 @@ int main(int argc, char *argv[]){
                     
                     printf("If you leave out a -n, -s, or -t it will defualt to the value 1\n\n");
                     printf("Have fun :)\n");
+
+                    EXIT(0);
             break;
         case 'n':
 			//atoi convert char to int

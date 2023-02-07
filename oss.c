@@ -24,7 +24,15 @@ int main(int argc, char *argv[]){
         switch (opt)
         {
         case 'h':
-			printf("This is your help message!\n");
+			printf("To run this project: \n\n
+            run the command: ./oss -n num -s num -t num\n\n
+                    num = can be replaced with any number below 18 | -n, -s, and -t can be typed in any order\n
+                    -n = number of total children to launch\n
+                    -s = how many children run at the same time\n
+                    -t = number to pass to worker process (iterations)\n
+                    
+                    If you leave out a -n, -s, or -t it will defualt to the value 1\n\n
+                    Have fun :)\n");
             break;
         case 'n':
 			//atoi convert char to int
@@ -66,25 +74,14 @@ int main(int argc, char *argv[]){
             break;
         }
         else {
-            //wait for the process to finish after running the given simul int simultaneously
+            //wait for the process to finish after running the given simul int simultaneously before starting another process
             if(i >= simul){
                 wait(&stat);
             }
-
-            //wait again on the very last process if proc isnt evenly divisible by simul
-            // if(i == proc){
-            //     childpid = waitpid(childpid, &stat, 0);
-            // }
         }
     }
     return 0;
 }
-
-// //Modulus calculation in order to determine how many run simultaneously before doing wait function
-// int mod(int n, int d){
-//     int remainder = n - (d * ((int)(n/d)));
-//     return remainder;
-// }
 
 
 

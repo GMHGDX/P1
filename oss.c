@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<getopt.h> //Needed for optarg function
 #include<stdlib.h> //EXIT_FAILURE
-#include <unistd.h> //for pid_t 
+#include <unistd.h> //for pid_t and exec
 #include <sys/types.h>
 
 int main(int argc, char *argv[]){
@@ -62,9 +62,8 @@ int main(int argc, char *argv[]){
         if (childpid == 0){ /* child code */
             printf("I am child %ld and my parent is: %ld\n", (long)getpid(), (long)getppid());
             //worker(iter);
-            execl("/bin/ls", "ls", "-l", NULL);
-            // char *args[] = {"./worker", NULL};
-            // int returnval = execvp(args[0], args);
+            char *args[] = {"worker", "c", "programe", NULL};
+            int returnval = execvp("./worker", args);
             printf("---------------------Returend with");
             break;
         }

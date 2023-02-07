@@ -63,7 +63,7 @@ int main(int argc, char *argv[]){
             printf("I am child %ld and my parent is: %ld\n", (long)getpid(), (long)getppid());
             //worker(iter);
             char *programName = "./worker";
-            char *args[] = {programName, NULL, "/", iter};
+            char *args[] = {programName, NULL, "/classes/OS/sp2023/hieken/P1", iter};
             execvp(programName, args);
             break;
         }
